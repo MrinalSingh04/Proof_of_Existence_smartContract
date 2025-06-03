@@ -1,66 +1,61 @@
-## Foundry
+# 🔐 Proof of Existence v2 (PoE with Metadata)
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+A decentralized application for proving the existence and ownership of digital documents **without uploading** the file itself — using **hashing**, **metadata storage**, and **blockchain timestamps**.
 
-Foundry consists of:
+## 🚀 What is this project?
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+This smart contract allows users to:
 
-## Documentation
+- Register a document by submitting its cryptographic hash
+- Attach optional metadata (title and category)
+- Store a tamper-proof timestamp and ownership record on-chain
 
-https://book.getfoundry.sh/
+This is **Proof of Existence v2**, an improvement over naive PoE systems by including:
 
-## Usage
+- Metadata (title, category)
+- Ownership tracking
+- Duplicate prevention
+- Public verification
 
-### Build
+---
 
-```shell
-$ forge build
-```
+## 🧠 Why build this?
 
-### Test
+### ✅ Problem
 
-```shell
-$ forge test
-```
+Legal and professional systems often require **verifiable evidence** that a document existed at a specific point in time — e.g.:
 
-### Format
+- Contracts
+- Research drafts
+- Source code snapshots
+- Artworks, writing, or inventions
 
-```shell
-$ forge fmt
-```
+However, uploading full documents to the blockchain is expensive and insecure. Instead, we use **file hashes** to uniquely represent content.
 
-### Gas Snapshots
+### ✅ Solution
 
-```shell
-$ forge snapshot
-```
+This smart contract enables:
 
-### Anvil
+- Proof without revealing document contents
+- Timestamp and ownership tracking
+- Public, decentralized registry
 
-```shell
-$ anvil
-```
+By storing only the hash + minimal metadata, it keeps costs low and privacy intact.
 
-### Deploy
+---
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
+## ⚙️ Tech Stack
 
-### Cast
+| Layer       | Tool                                       |
+| ----------- | ------------------------------------------ |
+| Language    | Solidity (v0.8.20)                         |
+| Framework   | [Foundry](https://book.getfoundry.sh/)     |
+| Local Chain | [Anvil](https://book.getfoundry.sh/anvil/) |
+| Deployment  | `forge script`                             |
+| Testing     | `forge test`                               |
 
-```shell
-$ cast <subcommand>
-```
+---
 
-### Help
+## 📄 📄 License
 
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+MIT License — use freely, modify openly.
