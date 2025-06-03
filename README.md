@@ -1,4 +1,4 @@
-# 🔐 Proof of Existence v2 (PoE with Metadata)
+# 🔐 Proof of Existence 
 
 A decentralized application for proving the existence and ownership of digital documents **without uploading** the file itself — using **hashing**, **metadata storage**, and **blockchain timestamps**.
 
